@@ -7,7 +7,7 @@ const calculateOrderAmount = (items) => {
     // let total=items[0].c_price*items[0].c_quantity
     // console.log(total+"       ::calculateOrder")
 
-    return items;
+    return items>0 ? items : 1
   };
 
 const routeStripePay=async(req,res)=>{

@@ -12,6 +12,7 @@ import {
 } from './checkout.styles';
 import { useSelector } from 'react-redux';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
+import Button from '../../components/button/button.component';
 
 const Checkout = () => {
   // const { cartItems, cartTotal } = useContext(CartContext);
@@ -41,6 +42,7 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <Total>Total: ${cartTotal}</Total>
+      <Button buttonType={'stripe-pay'} >Pay</Button>
     </CheckoutContainer>
   );
 };

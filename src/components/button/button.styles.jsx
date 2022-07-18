@@ -35,6 +35,16 @@ export const GoogleSignInButton = styled(BaseButton)`
   }
 `;
 
+export const StripePayButton=styled(BaseButton)`
+  background-color: pink;
+  color:  green
+
+  &: hover{
+    background-color: yellow;
+    border:none;
+  }
+`;
+
 export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;

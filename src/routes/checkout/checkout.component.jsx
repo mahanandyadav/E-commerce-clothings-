@@ -13,12 +13,16 @@ import {
 import { useSelector } from 'react-redux';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 import Button from '../../components/button/button.component';
+import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   // const { cartItems, cartTotal } = useContext(CartContext);
   const cartItems=useSelector(selectCartItems)
   const cartTotal=useSelector(selectCartTotal)
-
+  const navigate=useNavigate()
+  const handleNavigationStripe=()=>{
+    navigate('/stripe_pay')
+  }
   return (
     <CheckoutContainer>
       <CheckoutHeader>
@@ -42,7 +46,10 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <Total>Total: ${cartTotal}</Total>
-      <Button buttonType={'stripe-pay'} >Pay</Button>
+      <Button
+       buttonType={'stripe-pay'} 
+       onClick={handleNavigationStripe}
+       >Pay</Button>
     </CheckoutContainer>
   );
 };

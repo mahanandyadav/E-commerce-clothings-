@@ -36,11 +36,12 @@ export const GoogleSignInButton = styled(BaseButton)`
 `;
 
 export const StripePayButton=styled(BaseButton)`
-  background-color: pink;
-  color:  green
+  background-color: red;
+  color:  white;
 
   &: hover{
-    background-color: yellow;
+    background-color: green;
+    color: white;
     border:none;
   }
 `;

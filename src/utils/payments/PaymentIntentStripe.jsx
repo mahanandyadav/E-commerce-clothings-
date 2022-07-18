@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-// import "./PaymentIntentStripe.css";
+import "./PaymentIntentStripe.css";
 import CheckoutFormStripe from "./CheckoutFormStripe";
 import { selectCartTotal } from "../../store/cart/cart.selector";
 import { useSelector } from "react-redux";

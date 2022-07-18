@@ -82,6 +82,7 @@ export default function CheckoutFormStripe() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement id="payment-element" />
+      <br/>
       <button disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}

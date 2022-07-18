@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { createUserDocumentFromAuth, onAuthStateChangedListener } from './utils/firebase/firebase.utils';
 import { setCurrentUser } from './store/user/user.action';
 import { useDispatch } from 'react-redux';
+import PaymentIntentStripe from './utils/payments/PaymentIntentStripe';
 
 const App = () => {
   const dispatch=useDispatch()
@@ -30,7 +31,7 @@ const App = () => {
         <Route path='shop/*' element={<Shop />} />
         <Route path='auth' element={<Authentication />} />
         <Route path='checkout' element={<Checkout />} />
-        <Route path='stripe_pay'  element={<Shop/>} />
+        <Route path='stripe_pay'  element={<PaymentIntentStripe/>} />
       </Route>
     </Routes>
   );

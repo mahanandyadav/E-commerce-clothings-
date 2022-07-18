@@ -4,9 +4,10 @@ const stripe =require('stripe')('sk_test_51L8Qs3SIMProKj4qW1cHjHo1Yg1W3YaWXBkS6s
 
 const calculateOrderAmount = (items) => {
   
-    let total=items[0].c_price*items[0].c_quantity
-    console.log(total+"       ::calculateOrder")
-    return total;
+    // let total=items[0].c_price*items[0].c_quantity
+    // console.log(total+"       ::calculateOrder")
+
+    return items;
   };
 
 const routeStripePay=async(req,res)=>{

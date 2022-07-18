@@ -7,7 +7,8 @@ const port=process.env.PORT || 3001;
 app.use(express.json())
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", req.headers.origin);
+    // res.header("Access-Control-Allow-Origin", req.headers.origin);
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
     // res.header("Access-Control-Allow-Credentials", 'true')//true as string
     // res.header('Access-Control-Expose-Headers',

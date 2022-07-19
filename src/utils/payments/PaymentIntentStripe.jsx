@@ -43,6 +43,9 @@ export default function PaymentIntentStripe() {
     <div >
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
+          <div>
+          <h1 id="amount_h1">Total &#8377;{cartTotal}</h1>
+          </div>
           <CheckoutFormStripe />
         </Elements>
       )}

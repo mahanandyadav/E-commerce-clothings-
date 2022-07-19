@@ -18,7 +18,7 @@ const webhookStripe=async (req,res)=>{
   }
 
   // Handle the event
-  let payment_intent='na'
+  var payment_intent='na'
   switch (event.type) {
     case 'payment_intent.amount_capturable_updated':
        paymentIntent = event.data.object;
@@ -63,10 +63,10 @@ const webhookStripe=async (req,res)=>{
     // ... handle other event types
     default:
       console.log(`Unhandled event type ${event.type}`);
-      res.status(431).end()
+      res.status(400).end()
   }
 
   // Return a 200 response to acknowledge receipt of the event
-  res.send();
+  res.send({'message':event.data.object});
 };
 module.exports=webhookStripe

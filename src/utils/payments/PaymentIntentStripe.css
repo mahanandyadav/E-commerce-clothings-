@@ -75,3 +75,8 @@
   -webkit-animation: loading 2s infinite ease;
   animation: loading 2s infinite ease;
 }
+
+#amount_h1{
+  display: flex;
+  justify-content: space-around;
+}

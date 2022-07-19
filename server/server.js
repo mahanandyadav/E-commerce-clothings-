@@ -1,10 +1,12 @@
 const path=require('path');
 const express=require('express');
-const routeStripePay=require('./routeStripePay')
+const routeStripePay=require('./routeStripePay');
+const  routeWebhookStripe= require('./routeWebhookStripe');
 
 const app=express();
 const port=process.env.PORT || 3001;
-app.use(express.json())
+// app.use(express.json({verify: (req,res,buf) => { req.rawBody = buf }}));
+
 
 app.use((req, res, next) => {
     // res.header("Access-Control-Allow-Origin", req.headers.origin);
@@ -28,8 +30,11 @@ app.get('*',(req,res)=>{
     res.sendFile(path.resolve(publicPath,'index.html'));
 })*/
 
-app.post('/create-payment-intent',routeStripePay)
 
+// app.use(express.json({verify: (req,res,buf) => { req.rawBody = buf }}));
+app.post('/webhook', express.raw({type: 'application/json'}),routeWebhookStripe)
+app.use(express.json())
+app.post('/create-payment-intent',routeStripePay)
 
 
 app.listen(port,()=>{

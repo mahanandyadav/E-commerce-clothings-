@@ -23,7 +23,7 @@ const SignInForm = () => {
   const dispatch=useDispatch()
 
   const resetFormFields = () => {
-    setFormFields(defaultFormFields);
+    // setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
@@ -34,8 +34,8 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-     const user= await signInAuthUserWithEmailAndPassword(email, password);
-      resetFormFields();
+     const user= await    (email, password);
+      // resetFormFields();
       // dispatch({type:'SET_CURRENT_USER',payload:user.user})
     } catch (error) {
       console.log('user sign in failed'+ error);

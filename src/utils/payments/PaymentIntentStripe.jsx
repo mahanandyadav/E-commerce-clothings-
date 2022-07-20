@@ -5,10 +5,11 @@ import "./PaymentIntentStripe.css";
 import CheckoutFormStripe from "./CheckoutFormStripe";
 import { selectCartTotal } from "../../store/cart/cart.selector";
 import { useSelector } from "react-redux";
+import PreventRouterHoc from "../../components/hoc/preventRouteHoc";
 
 const stripePromise = loadStripe("pk_test_51L8Qs3SIMProKj4qioseIVtzt8M659G4qp9Fv4DzPTzOYa0WD1qTxSd0UObqLNVUXcBs7pqTxqCHz1R4Pac5kVFp00wyo1CxxU");
 
-export default function PaymentIntentStripe() {
+ function PaymentIntentStripe() {
   const [clientSecret, setClientSecret] = useState("");
   /*const items=[
     {
@@ -52,3 +53,5 @@ export default function PaymentIntentStripe() {
     </div>
   );
 }
+
+export default PreventRouterHoc(PaymentIntentStripe)

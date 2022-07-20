@@ -17,6 +17,8 @@ export const BaseButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
+
 
   &:hover {
     background-color: white;
@@ -30,6 +32,7 @@ export const GoogleSignInButton = styled(BaseButton)`
   color: white;
 
   &:hover {
+    // white-space: normal;
     background-color: #357ae8;
     border: none;
   }

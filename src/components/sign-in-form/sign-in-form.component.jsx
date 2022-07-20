@@ -76,7 +76,10 @@ const SignInForm = () => {
             type='button'
             onClick={signInWithGoogle}
           >
+            {/* <div  style={{whiteSpace: "normal" , wordWrap: "break-word"}}> */}
+
             Sign In With Google
+            {/* </div> */}
           </Button>
         </ButtonsContainer>
       </form>

@@ -42,7 +42,7 @@ export default function SnackbarCom() {
 
     return (
         <div>
-            <Button onClick={handleClick}>Open snackbar</Button>
+            <Button onClick={handleClick}>Test snackbar</Button>
             <Snackbar
                 open={open}
                 autoHideDuration={6000}

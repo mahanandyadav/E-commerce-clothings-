@@ -11,6 +11,7 @@ import {
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const defaultFormFields = {
   email: '',
@@ -20,25 +21,27 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
   const resetFormFields = () => {
     // setFormFields(defaultFormFields);
   };
-
+  // console.log(window.location)
+  const navigate=useNavigate()
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
+    navigate('/shop')
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-     const user= await    (email, password);
+      const user = await (email, password);
       // resetFormFields();
       // dispatch({type:'SET_CURRENT_USER',payload:user.user})
     } catch (error) {
-      console.log('user sign in failed'+ error);
+      console.log('user sign in failed' + error);
     }
   };
   const handleChange = (event) => {

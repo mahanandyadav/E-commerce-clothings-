@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 
-import { CartContext } from '../../contexts/cart.context-not-used';
-
+import SnackbarCom from '../../components/snackbar/snackbar'
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
 import {
@@ -50,6 +49,9 @@ const Checkout = () => {
        buttonType={'stripe-pay'} 
        onClick={handleNavigationStripe}
        >Pay</Button>
+       <SnackbarCom
+       
+       />
     </CheckoutContainer>
   );
 };

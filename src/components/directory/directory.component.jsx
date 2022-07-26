@@ -1,4 +1,5 @@
 import DirectoryItem from '../directory-item/directory-item.component';
+import React from 'react'
 
 import { DirectoryContainer } from './directory.styles';
 import Joyride, { CallBackProps, STATUS, Step } from 'react-joyride';
@@ -42,7 +43,7 @@ const step = [
     target:'.logo',
     title:'Home',
     disableOverlayClose: true,
-    content:<p>Welcome!! This is your home page</p>,
+    content:"Welcome!! This is your home page",
     floaterProps: {
       disableAnimation: false,
     },
@@ -51,7 +52,7 @@ const step = [
     target:'.shop',
     title:'Shop',
     disableOverlayClose: true,
-    content:<p>Way to detail view of various categories </p>,
+    content:"Way to detail view of various categories",
     floaterProps: {
       disableAnimation: false,
     },
@@ -117,7 +118,6 @@ const step = [
 const Directory = () => {
   const [run, setRun] = useState(false)
 
-  console.log(window)
 if(window.location.hash.length===4){
   setRun(true)
 }

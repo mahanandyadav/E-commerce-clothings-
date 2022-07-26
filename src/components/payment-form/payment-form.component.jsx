@@ -1,7 +1,7 @@
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import Buttonfaile_button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { PaymentFormContainer, FormContainer, PayMentButton } from "./payment-form.style";
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useSelector } from "react-redux";
 
 import { selectCartTotal } from "../../store/cart/cart.selector";

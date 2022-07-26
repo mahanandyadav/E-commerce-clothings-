@@ -32,9 +32,22 @@
     "styled-components": "5.3.3",
     "web-vitals": "2.1.4"
   },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "style-loader": "^3.3.1"
+  },
   "scripts": {
     "client": "react-scripts start ",
     "server": "nodemon ./server/server",
+    "webpack": "webpack --mode development",
     "start1": "react-scripts start --host=0.0.0.0",
     "build": "react-scripts build",
     "test": "react-scripts test",

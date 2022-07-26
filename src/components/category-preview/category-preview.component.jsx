@@ -1,3 +1,5 @@
+import React from 'react'
+
 import ProductCard from '../product-card/product-card.component';
 
 import {

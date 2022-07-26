@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { useSelector } from 'react-redux';
 
 import {
@@ -14,7 +16,7 @@ import {
   HeaderBlock,
   Total,
 } from './checkout.styles';
-import PaymentForm from '../../components/payment-form/payment-form.component';
+// import PaymentForm from '../../components/payment-form/payment-form.component';
 
 import Button from '../../components/button/button.component';
 import { useNavigate } from 'react-router-dom';

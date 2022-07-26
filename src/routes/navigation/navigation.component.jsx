@@ -1,16 +1,16 @@
-import { Fragment } from "react";
+import React,{ Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
-// import  CrwnLogo from '../../assets/crown.svg';//webpack
 
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 
-import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+// import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+import  CrwnLogo from '../../assets/crown.svg';//webpack
 
 import {
   NavigationContainer,

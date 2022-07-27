@@ -1,4 +1,6 @@
 const path=require('path')
+const webpack = require('webpack');
+
 // const dotenv = require('dotenv')
 require('dotenv').config()
 
@@ -24,7 +26,7 @@ if(environment==='development'){
 }
 
 module.exports={
-    entry:'./server/server.js',
+    entry:'./server.js',
     output:{
         path:path.resolve(__dirname,'dist'),
         filename:'api.bundle.js',

@@ -9,7 +9,7 @@ export default function CheckoutFormStripe() {
   const stripe = useStripe();
   const elements = useElements();
 
-  const [email, setEmail] = useState('mahanandyadav04@gmail.com');
+  const [email, setEmail] = useState('mahanandyadav4@gmail.com');
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
